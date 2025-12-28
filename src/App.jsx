@@ -7,12 +7,14 @@ import Experiences from './components/Experiences'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Stats from './components/Stats'
 
 const App = () => {
   return (
     <div className='bg-black flex flex-col w-[100%]  h-full'>
       <Header/>
       <Hero/>
+      <Stats/>
       <About/>
       <Projects/>
       <Experiences/>
