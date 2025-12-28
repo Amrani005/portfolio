@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Project from './Project'
 import { myProjects } from '../constants'
 import { useMotionValue, useSpring,motion } from 'motion/react'
-import Experiences from './Experiences'
 
 
 

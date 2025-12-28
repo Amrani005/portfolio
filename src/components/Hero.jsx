@@ -1,6 +1,6 @@
 import Loader from '../components/Loader'
 import HeroText from './HeroText'
-import ParallaxBackgrounds from './parallaxBackgrounds'
+import ParallaxBackgrounds from './ParallaxBackgrounds'
 import { useFrame } from '@react-three/fiber'
 import { Canvas } from '@react-three/fiber'
 import { Astronaut } from '../components/Astronaut'
