@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/5 my-8"></div>
+        <div className="border-t border-white/5 my-9"></div>
 
         {/* Bottom Section: Copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-xs lg:text-lg">

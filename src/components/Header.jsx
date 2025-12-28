@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navigation } from '../constants'
 import { useState } from 'react'
-import {motion} from 'motion/react'
+import {AnimatePresence, motion} from 'motion/react'
+import { div } from 'motion/react-client'
 
 const header = () => {
     const [isOpen,setIsOpen] = useState(false);
@@ -9,9 +10,11 @@ const header = () => {
         setIsOpen(!isOpen);
     }
     
-  return (
-    <div className={`bg-transparent fixed text-red-800 text-3 p-3 lg:p-5 
-      md:p-5 justify-between flex items-center shadow-xl w-full h-17 md:justify-between     ${isOpen ? '  z-100':'backdrop-blur z-100 '}   
+  return ( 
+    <div >
+        <div className={` mt-4 bg-black/30 fixed text-red-800 text-3 px-3 lg:p-5 
+      md:p-5 justify-between flex items-center shadow-xl w-[85%]
+        h-17 md:justify-between left-8 backdrop-blur-lg z-100   ${isOpen ? 'rounded-t-3xl  ':'rounded-full '}   
      `}>
        <p className='text-3xl  font-bold '> Seddik</p>
 
@@ -34,29 +37,42 @@ const header = () => {
 
          </div>
 
-         
-            {isOpen && (
-            <motion.div 
-              initial={{opacity:0, x:-10}}
-              animate={{opacity:1, x:20}}
-              transition={{duration:1}}
-             className='flex flex-col  lg:hidden gap-8 text-xl  top-20
-               h-screen w-full  -translate-x-8 p-5 text-center pt-20 bg-transparent  
-                fixed backdrop-blur z-50'
-            >
-               {Navigation.map((item)=>(
-                    <a href={item.href}  className='text-white text-3xl hover:text-red-600
-                       cursor-pointer font-bold duration-300 hover:scale-110 mb-10 '>
-                     {item.name}
-                   </a>
-                ))}
-            </motion.div>
-         )}
+          
+            
 
          
 
          
     </div>
+    <AnimatePresence>
+
+    
+    {isOpen && (
+            <motion.div 
+              initial={{opacity:0, y:-10}}
+              animate={{opacity:1, y:0}}
+              exit={{opacity:0, y:-10}}
+              transition={{duration:0.4}}
+              className='flex flex-col fixed top-20 items-center
+                z-100 w-[85%] h-[50%] bg-black/30 backdrop-blur-lg
+                rounded-b-3xl left-1/2 -translate-x-1/2'
+            >
+              <div className='flex flex-col ' >
+                {Navigation.map((item)=>(
+                  
+                    <a href={item.href}  className='text-white text-3xl hover:text-red-600
+                       cursor-pointer text-center mt-10 font-bold duration-300 hover:scale-110 mb-10 '>
+                     {item.name}
+                   </a>
+                  
+                    
+                ))}</div>
+               
+            </motion.div>
+         )}
+         </AnimatePresence>
+    </div>
+   
   )
 }
 
