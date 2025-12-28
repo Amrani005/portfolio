@@ -31,7 +31,7 @@ const About = () => {
         {/* Grid 1 */}
         <div className='grid-1 grid-default-color   '
         >
-          <img src="src/assets/coding-pov.png" 
+          <img src="assets/coding-pov.png" 
           className='absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3rem] 
           md:-right-50 md:inset-y-10 lg:scale-[2.5]  ' />
             

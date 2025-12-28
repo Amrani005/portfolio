@@ -27,7 +27,7 @@ const Project = ({ title, description,subDescription,href,
       
       <button onClick={()=>setHidden(true)} className='flex items-center mt-18  gap-2 cursor-pointer hover-animation'>
         Read More
-        <img src="src/assets/arrow-right.svg" className='w-5'/>
+        <img src="assets/arrow-right.svg" className='w-5'/>
       </button>
     
       

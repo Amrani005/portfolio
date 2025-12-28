@@ -14,7 +14,7 @@ const header = () => {
     <div >
         <div className={` mt-4 bg-black/30 fixed text-red-800 text-3 px-3 lg:p-5 
       md:p-5 justify-between flex items-center shadow-xl w-[85%]
-        h-17 md:justify-between left-8 backdrop-blur-lg z-100   ${isOpen ? 'rounded-t-3xl  ':'rounded-full '}   
+        h-17 md:justify-between lg:left-30 left-8 backdrop-blur-lg z-100   ${isOpen ? 'rounded-t-3xl  ':'rounded-full '}   
      `}>
        <p className='text-3xl  font-bold '> Seddik</p>
 
@@ -31,7 +31,7 @@ const header = () => {
 
          <div className='flex  xl:hidden cursor-pointer duration-300 '>
             <button onClick={()=>handleClick()} className='cursor-pointer' >
-                 <img src={!isOpen?'/src/assets/menu.svg':'/src/assets/close.svg'} className='w-13 h-13  rounded-xl' />
+                 <img src={!isOpen?'assets/menu.svg':'/src/assets/close.svg'} className='w-13 h-13  rounded-xl' />
                     
             </button>
 

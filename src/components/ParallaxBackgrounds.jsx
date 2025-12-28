@@ -10,7 +10,7 @@ const ParallaxBackgrounds = () => {
            animate={{}}
            initial={{}}
           >
-            <img src="src/assets/sky.jpg" 
+            <img src="assets/sky.jpg" 
                className='absolute h-screen -z-0 w-full brightness-80'
               />
 
@@ -22,7 +22,7 @@ const ParallaxBackgrounds = () => {
            transition={{delay:0.5}}
            >
             
-            <img src="src/assets/mountain-1.png" 
+            <img src="assets/mountain-1.png" 
                className='hidden lg:flex md:flex absolute h-screen z-5 w-full brightness-60'
               />
            </motion.div>
@@ -33,7 +33,7 @@ const ParallaxBackgrounds = () => {
             transition={{delay:0.7}}
            >
              
-               <img src="src/assets/mountain-2.png" 
+               <img src="assets/mountain-2.png" 
                className='absolute h-screen w-full z-1 w-full brightness-60'
               />
            </motion.div>
@@ -43,7 +43,7 @@ const ParallaxBackgrounds = () => {
             initial={{y:0,opacity:0}}
             transition={{delay:1.2}}
            >
-             <img src="src/assets/mountain-3.png" 
+             <img src="assets/mountain-3.png" 
                className='absolute h-screen  w-full brightness-75'
               />
 
