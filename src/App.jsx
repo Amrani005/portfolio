@@ -12,8 +12,9 @@ import Stats from './components/Stats'
 const App = () => {
   return (
     <div className='bg-black flex flex-col w-[100%]  h-full'>
+      
       <Header/>
-      <Hero/>
+        
       <Stats/>
       <About/>
       <Projects/>
