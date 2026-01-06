@@ -25,7 +25,7 @@ const HeroText = () => {
                  Hi,I'm
                 <span className='text-transparent bg-clip-text 
                 bg-gradient-to-b lg:from-red-900 lg:text-5xl  lg:to-red-500 
-                from-cyan-900 to-cyan-500 ml-2'>
+                from-red-900 to-red-500 ml-2'>
                   Seddik
                   </span>
              </motion.h1>

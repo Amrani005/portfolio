@@ -11,7 +11,7 @@ const ParallaxBackgrounds = () => {
            initial={{}}
           >
             <img src="assets/sky.jpg" 
-               className='absolute h-screen -z-0 w-full brightness-80'
+               className='absolute h-screen -z-0 w-full brightness-60'
               />
 
           </motion.div>
