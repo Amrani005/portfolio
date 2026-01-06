@@ -12,7 +12,7 @@ const Counter = ({ value, suffix = "" }) => {
   
   // Spring physics for smooth "landing" on the final number
   const springValue = useSpring(motionValue, {
-    damping: 50,
+   
     stiffness: 100,
   });
 
@@ -99,7 +99,8 @@ const Stats = () => {
               whileHover={{ y: -10 }}
               className="group bg-[#10102b] border border-white/5 p-8
                rounded-2xl flex flex-col items-center text-center 
-               shadow-lg hover:shadow-purple-500/10 transition-shadow"
+               shadow-lg hover:shadow-purple-500/10 transition-shadow 
+               cursor-pointer"
             >
               {/* Animated Number */}
               <div className="lg:flex hidden text-5xl md:text-6xl text-transparent

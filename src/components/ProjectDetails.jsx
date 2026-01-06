@@ -19,7 +19,7 @@ const ProjectDetails = ({title, description,subDescription,href,
              bg-midnight hover:bg-gray-500 `}
              onClick={closeModel}
             >
-                <img src="src/assets/close.svg" className='w-6 m-6 '/>
+                <img src="assets/close.svg" className='w-6 m-6 '/>
             </button>
              <img src={image} alt={title} className='w-full h-full 
               rounded-t-2xl rounded-b-lg overflow ' />
