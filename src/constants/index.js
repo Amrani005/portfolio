@@ -329,8 +329,8 @@ export const reviews = [
 ];
 
 export const Navigation = [
-  { name: "Home" },
-  { name: "About" },
-  { name: "Contact" },
-  { name: "Portfolio" },
+  { name: "Home",href:"#home-section" },
+  { name: "About",href:"#about-section" },
+  { name: "Contact",href:"#contact-section" },
+  { name: "Portfolio",href:"#portfolio-section" },
 ];

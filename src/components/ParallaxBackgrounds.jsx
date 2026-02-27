@@ -7,8 +7,7 @@ const ParallaxBackgrounds = () => {
     <section className='absolute w-full h-full bg-cover  '>
         <div className='relative  lg:w-screen h-screen overflow-y-hidden '> 
           <motion.div 
-           animate={{}}
-           initial={{}}
+           
           >
             <img src="assets/sky.jpg" 
                className='absolute h-screen -z-0 w-full brightness-60'
@@ -17,9 +16,7 @@ const ParallaxBackgrounds = () => {
           </motion.div>
 
            <motion.div
-           animate={{y:0,opacity:1}}
-           initial={{y:-50,opacity:0}}
-           transition={{delay:0.5}}
+           
            >
             
             <img src="assets/mountain-1.png" 
@@ -28,9 +25,7 @@ const ParallaxBackgrounds = () => {
            </motion.div>
 
            <motion.div 
-            animate={{y:0,opacity:1}}
-            initial={{y:-50,opacity:0}}
-            transition={{delay:0.7}}
+            
            >
              
                <img src="assets/mountain-2.png" 
@@ -39,11 +34,18 @@ const ParallaxBackgrounds = () => {
            </motion.div>
 
            <motion.div
-            animate={{y:0,opacity:1}}
-            initial={{y:0,opacity:0}}
-            transition={{delay:1.2}}
+            
            >
              <img src="assets/mountain-3.png" 
+               className='absolute h-screen  w-full brightness-75'
+              />
+
+           </motion.div>
+
+           <motion.div
+           
+           >
+             <img src="assets/planets.png" 
                className='absolute h-screen  w-full brightness-75'
               />
 

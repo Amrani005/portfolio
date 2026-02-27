@@ -9,6 +9,12 @@ const header = () => {
     const handleClick = () =>{
         setIsOpen(!isOpen);
     }
+     const scrollToForm = () => {
+     document.getElementById('hero-section')?.scrollIntoView({ behavior: 'smooth' });
+   
+    };
+    
+    
     
   return ( 
     <div >
@@ -16,7 +22,7 @@ const header = () => {
       md:p-5 justify-between flex items-center shadow-xl w-[85%]
         h-17 md:justify-between lg:left-30 left-8 backdrop-blur-lg z-100   ${isOpen ? 'rounded-t-3xl  ':'rounded-full '}   
      `}>
-       <p className='text-3xl  font-bold '> Seddik</p>
+       <p onClick={scrollToForm} className='text-3xl cursor-pointer  font-bold '> Seddik</p>
 
          <div className='hidden md:hidden lg:hidden px-5 xl:flex gap-15 text-xl  text-zinc-100
         '>
@@ -31,7 +37,7 @@ const header = () => {
 
          <div className='flex  xl:hidden cursor-pointer duration-300 '>
             <button onClick={()=>handleClick()} className='cursor-pointer' >
-                 <img src={!isOpen?'assets/menu.svg':'/src/assets/close.svg'} className='w-13 h-13  rounded-xl' />
+                 <img src={!isOpen?'assets/menu.svg':'assets/close.svg'} className='w-13 h-13  rounded-xl' />
                     
             </button>
 
@@ -55,13 +61,13 @@ const header = () => {
               transition={{duration:0.4}}
               className='flex flex-col fixed top-20 items-center
                 z-100 w-[85%] h-[50%] bg-black/30 backdrop-blur-lg
-                rounded-b-3xl left-1/2 -translate-x-1/2'
+                rounded-b-3xl left-8'
             >
-              <div className='flex flex-col ' >
+              <div className='flex flex-col gap-5 mt-8 ' >
                 {Navigation.map((item)=>(
                   
                     <a href={item.href}  className='text-white text-3xl hover:text-red-600
-                       cursor-pointer text-center mt-10 font-bold duration-300 hover:scale-110 mb-10 '>
+                       cursor-pointer text-center  font-bold duration-300 hover:scale-110 mb-10 '>
                      {item.name}
                    </a>
                   

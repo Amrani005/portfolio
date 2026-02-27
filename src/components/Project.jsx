@@ -13,19 +13,21 @@ const Project = ({ title, description,subDescription,href,
     
   return (
     <>
-       <div className='flex-wrap  gap-5 py-10 justify-between
-        sm:flex sm:space-y-0 lg:px-100  overflow-hidden  ' onMouseEnter={()=>setPreview(image)}
+       <div className='flex-wrap   gap-5 py-7  justify-between
+        sm:flex sm:space-y-0 lg:px-100    '
+         onMouseEnter={()=>setPreview(image)}
         onMouseLeave={()=>setPreview(null)} >
         <div>
-         <p className='text-xl md:text-2xl lg:text-2xl mb-2'>{title}</p>
-         <div className='flex  text-sm   gap-5  text-yellow-600 font-bold'>
+         <p className='text-xl md:text-2xl lg:-translate-x-80  lg:text-2xl mb-2'>{title}</p>
+         <div className='flex lg:-translate-x-80 text-sm   gap-5  text-yellow-600 font-bold'>
            {tags.map((tag)=>(
             <span key={tag.id}> {tag.name} </span>
            ))}
          </div>
         </div>
       
-      <button onClick={()=>setHidden(true)} className='flex items-center mt-18  gap-2 cursor-pointer hover-animation'>
+      <button onClick={()=>setHidden(true)} className='flex mt-18  
+        gap-2 cursor-pointer hover-animation lg:translate-x-80'>
         Read More
         <img src="assets/arrow-right.svg" className='w-5'/>
       </button>

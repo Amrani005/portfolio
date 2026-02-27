@@ -17,12 +17,12 @@ const Projects = () => {
   const [preview,setPreview]= useState(null );
 
   return (
-    <div className='c-space  bg-midnight '  onMouseMove={handleMouseMove}>
+    <div id='portfolio-section' className='c-space  bg-midnight  '  onMouseMove={handleMouseMove}>
     
       <motion.h1
        initial={{x:-80,opacity:0}}
        whileInView={{x:0,opacity:1}}
-       transition={{delay:0.8,duration:1}}
+       transition={{}}
        className='text-5xl lg:text-7xl md:text-6xl text-white 
         flex font-bold mt-10
       justify-center mb-29  '
@@ -31,20 +31,20 @@ const Projects = () => {
         My Selected Projects
       </motion.h1>
          
-      <div className='bg-gradient-to-r from-transparent via-neutral-700
+      <div className='bg-gradient-to-r   from-transparent via-neutral-700
       mt-12 h-[1px] w-full mb-5  '/>
-        <div>
-       {myProjects.map((project)=>(
-        <Project {...project}  setPreview={setPreview} />
-       ))} 
-       {preview &&  (
-        <motion.img className="fixed top-0 z-300 object-cover h-56 rounded-lg
-        shadow-lg pointer-event-none w-80" 
-        style={{x:springX,y:springY}} 
-        src={preview} />
-       )}
+        <div className=''>
+          {myProjects.map((project)=>(
+           <Project {...project}  setPreview={setPreview} />
+          ))} 
+          {preview &&  (
+           <motion.img className="fixed  top-0 z-300 object-cover h-56 rounded-lg
+           shadow-lg pointer-event-none w-80" 
+           style={{x:springX,y:springY}} 
+           src={preview} />
+          )}
         
-      </div>
+        </div>
     </div>
   )
 }

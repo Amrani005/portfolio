@@ -18,9 +18,10 @@ const Contact = () => {
     console.log('Form Submitted', formData);
     alert("Message sent! (Simulated)");
   };
+  
 
   return (
-    <section id="contact" className="w-full py-20 bg-[#050511] text-white 
+    <section id="contact-section" className="w-full py-20 bg-[#050511] text-white 
     overflow-hidden relative">
       
       {/* Background Glow Effect - Matches your site's ambient lighting */}

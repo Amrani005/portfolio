@@ -11,7 +11,7 @@ import { easeInOut, motion } from 'motion/react'
 const About = () => {
   const grid2container = useRef();
   return (
-   <section className='c-space  bg-midnight '>
+   <section id='about-section' className='c-space  bg-midnight '>
       <motion.h2 
        initial={{x:-50,opacity:0}}
        whileInView={{x:0,opacity:1}}

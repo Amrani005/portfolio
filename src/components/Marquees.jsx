@@ -7,7 +7,7 @@ export const reviews = [
     name: "Nadji",
     username: "@jack",
     body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://robohash.orzg/jackx",
+    img: "https://robohash.ozrg/jackx",
   },
   {
     name: "Rayan_blm",

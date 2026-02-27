@@ -1,54 +1,58 @@
-import Loader from '../components/Loader'
 import HeroText from './HeroText'
-import ParallaxBackgrounds from './ParallaxBackgrounds'
-import { useFrame } from '@react-three/fiber'
-import { Canvas } from '@react-three/fiber'
-import { Astronaut } from '../components/Astronaut'
-import { useMediaQuery } from 'react-responsive'
-import { easing } from 'maath'
-import { Suspense } from 'react'
-
+import { motion } from 'motion/react'
 
 const Hero = () => {
- const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
-    <section className='flex items-start justify-center md:items-start
-    md:justify-start min-h-screen overflow-hidden 
-      bg-midnight '>
-      <HeroText />
-      <ParallaxBackgrounds />
-      <figure className='absolute inset-0 z-50  '
-        style={{
-          width: '100vw',height: '100vh',
-        }}
-      >
+    <section id='hero-section' className="min-h-screen bg-midnight flex items-center 
+    justify-center p-4 md:p-10">
+      {/* Main Grid Container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 
+      w-full max-w-7xl items-center border border-white/10
+       p-8 md:p-16 rounded-[2rem] bg-gradient-to-b from-white/[0.03]
+        to-transparent">
         
-        <Canvas camera={{position:[0,1,3]}}>
-          <Suspense fallback={<Loader/>}>
-            <Astronaut
-           scale={isMobile ? 1:1.45} 
-           position={isMobile ?[0,-1.2,0]:[1.4,-1.2,0]} 
+        {/* Left Side: Your HeroText Information */}
+        <div className="z-10">
+           <HeroText />
            
+           {/* Integrated Buttons (CTAs) */}
+           <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ delay: 2 }}
+             className="flex flex-wrap gap-4 mt-10"
+           >
+             <button className="px-8 py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all shadow-lg shadow-red-600/20">
+               View Projects
+             </button>
+             <button className="px-8 py-4 border border-white/20 text-white font-bold rounded-2xl hover:bg-white/5 transition-all">
+               My Skills
+             </button>
+           </motion.div>
+        </div>
 
-          />
-           <Rig />
-          </Suspense>
+        {/* Right Side: Your Photo with Motion Animation */}
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="relative group"
+        >
+          <div className="relative z-10 w-full aspect-square rounded-3xl overflow-hidden border border-white/10">
+            <img 
+              src="assets/neggaaaa.png" 
+              alt="Seddik" 
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100"
+            />
+          </div>
           
-        </Canvas>
-      </figure>
-    </section> 
-  )
-};
+          {/* Decorative background element for depth without 3D */}
+          <div className="absolute -inset-4 bg-red-600/10 blur-3xl rounded-full z-0 group-hover:bg-red-600/20 transition-all" />
+        </motion.div>
 
-function Rig(){
-  return useFrame((state,delta)=>{
-    easing.damp3(
-     state.camera.position,
-     [state.mouse.x/10,1+state.mouse.y/10,3],
-     0.5,
-     delta
-    );
-  });
+      </div>
+    </section>
+  )
 }
 
 export default Hero

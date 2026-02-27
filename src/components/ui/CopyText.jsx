@@ -37,7 +37,7 @@ const CopyText = () => {
               transition={{duration:400}}
               
             > 
-                <img src={`${!copied ? 'assets/copy.svg':'src/assets/copy-done.svg'} `}  className='w-5 h-5' />
+                <img src={`${!copied ? 'assets/copy.svg':'assets/copy-done.svg'} `}  className='w-5 h-5' />
                {text}
             </motion.p>
           </AnimatePresence>
