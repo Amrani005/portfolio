@@ -243,36 +243,38 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "VideoGame Developer",
-    job: "Security & Defense Projects",
-    date: "2022-2023",
+    title: "Unity Game Developer",
+    job: "",
+    date: "2022 - 2023",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
-      "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
+      "using C# and Object-Oriented Programming (OOP) fundamentals to build scalable game logic.",
+      "Developed interactive video games and simulations using the Unity Engine.",
+      "Implemented core game mechanics, physics, and user interfaces within 3D environments.",
+      "Focused on clean code architecture and performance optimization in game loops."
     ],
   },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    date: "2023-2024",
+    title: "Full-Stack Web Developer",
+    job: "",
+    date: "2023 - 2025",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
+      "Transitioned from game development to building robust web architectures, bridging the gap between Front-End and Back-End.",
+      "Specialized in high-performance e-commerce solutions and complex management systems (School & Enterprise portals).",
+      "Engineered secure back-end systems for large-scale data ingestion and vehicle-to-cloud telemetry in the automotive sector.",
+      "Implemented RESTful APIs following ISO 26262 standards to ensure system safety and data integrity.",
+      "Delivered advanced features including real-time tracking, remote diagnostics, and over-the-air (OTA) updates."
     ],
   },
   {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
+    title: "Full-Stack & AI Specialist",
+    job: "Freelance / Entrepreneur",
+    date: "2026 - Present",
     contents: [
-      "Created a personal portfolio using Three.js, React, Vite, Next.js, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "Building premium, full-scale e-commerce ecosystems using Next.js, React, and advanced WebAPIs for high conversion.",
+      "Integrating custom AI Assistants into enterprise platforms to automate customer support and provide data-driven insights.",
+      "Developing sophisticated management systems for companies and educational institutions with custom-built dashboards.",
+      "Implementing 3D web elements using Three.js to create immersive, high-end user experiences that stand out in the market.",
+      "Delivering high-level results by focusing on performance optimization, SEO, and scalable cloud infrastructure."
     ],
   },
 ];
