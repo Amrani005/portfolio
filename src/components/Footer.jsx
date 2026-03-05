@@ -25,16 +25,16 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-lg">Quick Links</h3>
             <ul className="space-y-2 text-sm lg:text-lg">
               <li>
-                <a href="#home" className="hover:text-purple-400 transition-colors duration-300">Home</a>
+                <a href="#hero-section" className="hover:text-purple-400 transition-colors duration-300">Home</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-purple-400 transition-colors duration-300">About</a>
+                <a href="#about-section" className="hover:text-purple-400 transition-colors duration-300">About</a>
               </li>
               <li>
-                <a href="#portfolio" className="hover:text-purple-400 transition-colors duration-300">Portfolio</a>
+                <a href="#portfolio-section" className="hover:text-purple-400 transition-colors duration-300">Portfolio</a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-purple-400 transition-colors duration-300">Contact</a>
+                <a href="#contact-section" className="hover:text-purple-400 transition-colors duration-300">Contact</a>
               </li>
             </ul>
           </div>

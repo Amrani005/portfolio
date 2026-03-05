@@ -3,8 +3,8 @@ import { motion } from 'motion/react'
 
 const Hero = () => {
   return (
-    <section id='hero-section' className="min-h-screen bg-midnight flex items-center 
-    justify-center p-4 md:p-10">
+    <section id='hero-section' className="min-h-screen
+     bg-midnight flex items-center justify-center p-4 md:p-10">
       {/* Main Grid Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 
       w-full max-w-7xl items-center border border-white/10
@@ -20,12 +20,16 @@ const Hero = () => {
              initial={{ opacity: 0, y: 20 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: 2 }}
-             className="flex flex-wrap gap-4 mt-10"
+             className="flex flex-wrap gap-4 mt-10 cursor-pointer"
            >
-             <button className="px-8 py-4 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all shadow-lg shadow-red-600/20">
+             <button className="px-8 py-4 bg-red-600 text-white
+              font-bold rounded-2xl hover:bg-red-700 
+              transition-all shadow-lg shadow-red-600/20">
                View Projects
              </button>
-             <button className="px-8 py-4 border border-white/20 text-white font-bold rounded-2xl hover:bg-white/5 transition-all">
+             <button className="px-8 py-4 border border-white/20
+              text-white font-bold rounded-2xl hover:bg-white/5
+               transition-all">
                My Skills
              </button>
            </motion.div>
@@ -38,16 +42,20 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative group"
         >
-          <div className="relative z-10 w-full aspect-square rounded-3xl overflow-hidden border border-white/10">
+          <div className="relative z-10 w-full aspect-square
+           rounded-[10%] overflow-hidden border border-white/10">
             <img 
               src="assets/neggaaaa.png" 
               alt="Seddik" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 hover:scale-100"
+              className="w-full h-full object-cover grayscale 
+              hover:grayscale-0 transition-all duration-700 
+              scale-110 hover:scale-100"
             />
           </div>
           
           {/* Decorative background element for depth without 3D */}
-          <div className="absolute -inset-4 bg-red-600/10 blur-3xl rounded-full z-0 group-hover:bg-red-600/20 transition-all" />
+          <div className="absolute -inset-4 lg:bg-red-600/10 bg-red-600/20 blur-3xl
+           rounded-full z-0 group-hover:bg-red-600/20 transition-all" />
         </motion.div>
 
       </div>

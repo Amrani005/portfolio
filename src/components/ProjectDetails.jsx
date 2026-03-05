@@ -39,7 +39,7 @@ const ProjectDetails = ({title, description,subDescription,href,
                     ))} 
                     </div>
                     <a className='flex  gap-3 hover-animation cursor-pointer'>
-                        Viex Project
+                        View Project
                         <img src="assets/arrow-up.svg"  />
                     </a>
                     

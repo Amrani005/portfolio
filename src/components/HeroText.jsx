@@ -20,7 +20,8 @@ const HeroText = () => {
           animate='visible'
           variants={variants}
           transition={{ delay: 1 }}
-          className='text-3xl lg:text-5xl font-medium text-neutral-300 flex items-center'
+          className='text-xl lg:text-5xl font-medium text-neutral-300
+           flex items-center'
         >
           Hi, I'm
           <span className='text-transparent bg-clip-text bg-gradient-to-b from-red-900 to-red-500 ml-3 font-bold'>
@@ -34,7 +35,7 @@ const HeroText = () => {
           animate='visible'
           variants={variants}
           transition={{ delay: 1.2 }}
-          className='text-4xl md:text-5xl lg:text-6xl text-neutral-300 font-bold leading-tight'
+          className='text-2xl md:text-5xl lg:text-6xl text-neutral-300 font-bold leading-tight'
         >
           A Full Stack Developer <br className="hidden md:block" /> Dedicated to
         </motion.p> 
@@ -45,14 +46,14 @@ const HeroText = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.4 }}
           // Changed to flex-col on mobile and flex-row on desktop for clean alignment
-          className='text-4xl md:text-5xl lg:text-6xl font-extrabold mt-2 flex flex-col md:flex-row md:items-center text-neutral-300'
+          className='text-2xl md:text-5xl lg:text-6xl font-extrabold mt-2 flex flex-col md:flex-row md:items-center text-neutral-300'
         >
           <span className="mb-2 md:mb-0">Building</span>
           
           <div className="w-[200px] md:w-[280px] inline-block md:ml-4"> 
             <FlipWords 
               words={["Secure", "Modern", "Smart"]}
-              className='font-extrabold text-4xl md:text-5xl lg:text-6xl text-red-500 p-0 m-0'
+              className='font-extrabold text-2xl md:text-5xl lg:text-6xl text-red-500 p-0 m-0'
             />
           </div>
         </motion.div>
@@ -64,7 +65,7 @@ const HeroText = () => {
           variants={variants}
           transition={{ delay: 1.8 }}
           // Cleaned up the responsive classes to be more concise
-          className='text-3xl lg:text-5xl font-bold text-neutral-300 flex gap-3'
+          className='text-xl lg:text-5xl font-bold text-neutral-300 flex gap-3'
         >
           <p>Web</p> 
           <p className='md:hidden'>applications</p>
