@@ -12,30 +12,15 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/public/assets/projects/accessories.jpg",
+    image: "/assets/projects/accessories.jpg",
     tags: [
-      {
-        id: 1,
-        name: "C#",
-        path: "/public/assets/logos/csharp.svg",
-      },
-      {
-        id: 2,
-        name: ".Net",
-        path: "/public/assets/logos/dotnet.svg",
-      },
-      {
-        id: 3,
-        name: "Ef Core",
-        path: "/public/assets/logos/efcore.png",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/public/assets/logos/tailwindcss.svg",
-      },
+      { id: 1, name: "C#", path: "/assets/logos/csharp.svg" },
+      { id: 2, name: ".Net", path: "/assets/logos/dotnet.svg" },
+      { id: 3, name: "Ef Core", path: "/assets/logos/efcore.png" },
+      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
+
   {
     id: 2,
     title: "Authentication & Authorization System",
@@ -49,30 +34,15 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/public/assets/projects/auth-system.jpg",
+    image: "/assets/projects/auth-system.jpg",
     tags: [
-      {
-        id: 1,
-        name: "Auth0",
-        path: "/public/assets/logos/auth0.svg",
-      },
-      {
-        id: 2,
-        name: "React",
-        path: "/public/assets/logos/react.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/public/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/public/assets/logos/tailwindcss.svg",
-      },
+      { id: 1, name: "Auth0", path: "/assets/logos/auth0.svg" },
+      { id: 2, name: "React", path: "/assets/logos/react.svg" },
+      { id: 3, name: "SQLite", path: "/assets/logos/sqlite.svg" },
+      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
+
   {
     id: 3,
     title: "Blazor Web App",
@@ -86,30 +56,15 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/public/assets/projects/blazor-app.jpg",
+    image: "/assets/projects/blazor-app.jpg",
     tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/public/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: ".NET Core",
-        path: "/public/assets/logos/dotnetcore.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/public/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/public/assets/logos/tailwindcss.svg",
-      },
+      { id: 1, name: "Blazor", path: "/assets/logos/blazor.svg" },
+      { id: 2, name: ".NET Core", path: "/assets/logos/dotnetcore.svg" },
+      { id: 3, name: "SQLite", path: "/assets/logos/sqlite.svg" },
+      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
+
   {
     id: 4,
     title: "C++ Game Engine",
@@ -123,30 +78,15 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/public/assets/projects/game-engine.jpg",
+    image: "/assets/projects/game-engine.jpg",
     tags: [
-      {
-        id: 1,
-        name: "C++",
-        path: "/public/assets/logos/cplusplus.svg",
-      },
-      {
-        id: 2,
-        name: "C#",
-        path: "/public/assets/logos/csharp.svg",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/public/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/public/assets/logos/microsoft.svg",
-      },
+      { id: 1, name: "C++", path: "/assets/logos/cplusplus.svg" },
+      { id: 2, name: "C#", path: "/assets/logos/csharp.svg" },
+      { id: 3, name: "Git", path: "/assets/logos/git.svg" },
+      { id: 4, name: "Microsoft", path: "/assets/logos/microsoft.svg" },
     ],
   },
+
   {
     id: 5,
     title: "WordPress Custom Theme",
@@ -160,30 +100,15 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/public/assets/projects/wordpress-theme.jpg",
+    image: "/assets/projects/wordpress-theme.jpg",
     tags: [
-      {
-        id: 1,
-        name: "WordPress",
-        path: "/public/assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/public/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/public/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/public/assets/logos/vitejs.svg",
-      },
+      { id: 1, name: "WordPress", path: "/assets/logos/wordpress.svg" },
+      { id: 2, name: "HTML5", path: "/assets/logos/html5.svg" },
+      { id: 3, name: "CSS3", path: "/assets/logos/css3.svg" },
+      { id: 4, name: "Vite.js", path: "/assets/logos/vitejs.svg" },
     ],
   },
+
   {
     id: 6,
     title: "Online Learning Platform",
@@ -197,28 +122,12 @@ export const myProjects = [
     ],
     href: "",
     logo: "",
-    image: "/public/assets/projects/elearning.jpg",
+    image: "/assets/projects/elearning.jpg",
     tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/public/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/public/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/public/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/public/assets/logos/tailwindcss.svg",
-      },
+      { id: 1, name: "Blazor", path: "/assets/logos/blazor.svg" },
+      { id: 2, name: "Azure", path: "/assets/logos/azure.svg" },
+      { id: 3, name: "Stripe", path: "/assets/logos/stripe.svg" },
+      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
     ],
   },
 ];
