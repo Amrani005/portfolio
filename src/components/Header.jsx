@@ -22,7 +22,7 @@ const Header = () => {
       {/* Main Floating Header */}
       <header className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%]
        max-w-4xl py-3 px-6 md:px-8 flex justify-between items-center
-         backdrop-blur  z-[100] border border-white/10 rounded-full shadow-2xl">
+         backdrop-blur  z-[80] border border-white/10 rounded-full shadow-2xl">
         
         {/* Logo */}
         <p 

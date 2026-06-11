@@ -9,21 +9,35 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Stats from './components/Stats'
 import Skills from './components/Skills'
+import * as Sentry from '@sentry/react';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProjectDetailsPage from './components/ProjectDetails';
 
 const App = () => {
   return (
-    <div className='bg-black flex flex-col w-[100%]  h-full'>
-      <Header/>
-      <Hero/>
-      <Stats/>
-      <About/>
-      <Projects/>
-      <Skills/>
-      <Experiences/>
-      <Contact/>
-      <Footer/>
-    </div>
+    <Router>
+      <div className='bg-black flex flex-col w-[100%]  h-full'>
+        <Header/>
+        <Routes>
+           <Route path="/" element={
+              <>
+             <Hero/>
+             <Stats/>
+             <About/>
+             <Projects/>
+             <Skills/>
+             <Experiences/>
+             <Contact/>
+             <Footer/>
+              </>
+                 } />
+            <Route path="/project/:id" element={<ProjectDetailsPage />} />
+        </Routes>
+       
+      </div>
+    </Router>
   )
 }
 
-export default App
+export default Sentry.withProfiler(App)
