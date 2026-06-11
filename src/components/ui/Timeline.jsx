@@ -1,89 +1,108 @@
 "use client";
-import { useScroll, useTransform, motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { useScroll, motion } from "framer-motion";
+import React, { useRef } from "react";
 import { experiences } from "../../constants";
 
-export const Timeline = ({ data }) => {
-  const ref = useRef(null);
+export const Timeline = () => {
   const containerRef = useRef(null);
-  const [height, setHeight] = useState(0);
 
-  useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
-  }, [ref]);
-
+  // Optimized Scroll Logic: using scaleY instead of calculating pixel heights
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["start 60%", "end 80%"],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-
   return (
-    <div className="c-space section-spacing" ref={containerRef}>
-      <motion.h2 
-       initial={{x:-80,opacity:0}}
-       whileInView={{x:0,opacity:1}}
-       transition={{delay:1}}
-      className="text-heading">My Work Experience</motion.h2>
-      <div ref={ref} className="relative pb-20">
-        {experiences.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
-          >
-            <div className="sticky z-40 flex flex-col items-center s
-            elf-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
-              <div className="absolute flex items-center justify-center
-               w-10 h-10 rounded-full -left-[15px] bg-midnight">
-                <div className="w-4 h-4 p-2 border rounded-full
-                 bg-neutral-800 border-neutral-700" />
-              </div>
-              <div className="flex-col hidden gap-2 text-xl font-bold
-               md:flex md:pl-20 md:text-4xl text-neutral-300">
-                <h3>{item.date}</h3>
-                <h3 className="text-3xl text-neutral-400">{item.title}</h3>
-                <h3 className="text-3xl text-neutral-500">{item.job}</h3>
-              </div>
-            </div>
-
-            <div className="relative w-full pl-20 pr-4 md:pl-4">
-              <div className="block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden ">
-                <h3>{item.date}</h3>
-                <h3>{item.job}</h3>
-              </div>
-              {item.contents.map((content, index) => (
-                <p className="mb-3 font-normal text-neutral-400" key={index}>
-                  {content}
-                </p>
-              ))}
-            </div>
-          </div>
-        ))}
-        <div
-          style={{
-            height: height + "px",
-          }}
-          className="absolute md:left-1 left-1 top-0 overflow-hidden
-           w-[4px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))]
-            from-transparent from-[0%] via-neutral-700 to-transparent 
-            to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+    <section 
+      id="experience-section" 
+      className="w-full bg-[#050505] min-h-screen pt-32 pb-20 relative text-white flex flex-col items-center overflow-hidden"
+    >
+      
+      {/* 
+        Brutalist Header 
+        Massive typography paired with widely spaced metadata.
+      */}
+      <div className="w-full max-w-7xl px-6 mb-20 flex flex-col items-start border-b border-white/20 pb-8">
+        <motion.h2 
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-6xl md:text-8xl lg:text-[10rem] font-black uppercase tracking-tighter leading-none"
         >
-          <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0  w-[px] bg-gradient-to-t
-             from-red-600 via-red-900/50 to-red-800 from-[0%] 
-             via-[10%] rounded-full"
-          />
+          Experience
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-[10px] tracking-[0.5em] uppercase text-white/50 mt-6"
+        >
+          04 // Operational History
+        </motion.p>
+      </div>
+
+      {/* 
+        Timeline Container 
+      */}
+      <div className="w-full max-w-7xl px-6">
+        <div ref={containerRef} className="relative w-full pb-10 pl-8 md:pl-16">
+          
+          {/* 
+            The Brutalist Track Line 
+            Replaced the red gradient with a strict 1px pure white border.
+          */}
+          <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-white/10 origin-top">
+            <motion.div
+              style={{ scaleY: scrollYProgress }}
+              className="absolute inset-0 w-full bg-white origin-top"
+            />
+          </div>
+
+          {/* Timeline Items */}
+          {experiences.map((item, index) => (
+            <div
+              key={index}
+              className="relative grid grid-cols-1 md:grid-cols-12 gap-8 py-16 border-b border-white/10 group"
+            >
+              {/* 
+                Geometric Node 
+                Replaced rounded circles with sharp squares that invert on hover.
+              */}
+              <div className="absolute -left-[37px] md:-left-[69px] top-16 w-3 h-3 bg-[#050505] border border-white/50 group-hover:bg-white transition-colors duration-500 z-10" />
+
+              {/* Left Column: Date & Title */}
+              <div className="md:col-span-5 flex flex-col">
+                <h3 className="text-[10px] tracking-[0.4em] uppercase text-white/40 mb-4">
+                  {item.date}
+                </h3>
+                <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-2 group-hover:pl-2 transition-all duration-300">
+                  {item.title}
+                </h2>
+                <h3 className="text-[11px] font-bold tracking-[0.2em] uppercase text-white/70">
+                  {item.job}
+                </h3>
+              </div>
+
+              {/* Right Column: Content */}
+              <div className="md:col-span-7 flex flex-col space-y-6 md:pt-10">
+                {item.contents.map((content, idx) => (
+                  <p 
+                    key={idx} 
+                    className="text-[10px] md:text-[11px] tracking-[0.15em] leading-loose uppercase text-white/50 group-hover:text-white/80 transition-colors duration-300"
+                  >
+                    {content}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+          
         </div>
       </div>
-    </div>
+    </section>
   );
 };
+
+export default Timeline;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion'; // Using standard framer-motion import
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,150 +14,138 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here (e.g., EmailJS or API endpoint)
+    // Add your form submission logic here
     console.log('Form Submitted', formData);
     alert("Message sent! (Simulated)");
+    setFormData({ name: '', email: '', message: '' });
   };
-  
 
   return (
-    <section id="contact-section" className="w-full py-20 bg-[#050511] text-white 
-    overflow-hidden relative">
-      
-      {/* Background Glow Effect - Matches your site's ambient lighting */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px]
-       h-[600px] bg-purple-700/20 rounded-full blur-[120px] 
-       pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section 
+      id="contact-section" 
+      className="w-full bg-[#050505] min-h-screen py-32 flex flex-col items-center justify-center relative overflow-hidden"
+    >
+      <div className="w-full max-w-7xl mx-auto px-6">
         
-        {/* Section Header */}
-        <div className="mb-16 text-center">
-            <motion.h2 
-            initial={{y:50,opacity:0}}
-            whileInView={{y:0,opacity:1}}
-            transition={{delay:0.6,}}
-            className="text-4xl md:text-5xl font-bold bg-clip-text 
-            text-transparent bg-gradient-to-r from-white to-gray-400
-             mb-4">
-              Get in Touch
-            </motion.h2>
-            <motion.p
-             initial={{x:-50,opacity:0}}
-             whileInView={{x:0,opacity:1}}
-             transition={{delay:0.9}}
-             className="text-gray-400 max-w-2xl mx-auto text-lg">
-              Have a project in mind or want to discuss modern web 
-              solutions? 
-              I'm always open to new opportunities.
-            </motion.p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* 
+          Brutalist 2-Column Split 
+          Using sharp borders to divide the sections visually
+        */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 lg:grid-cols-2 border border-white/20"
+        >
           
-          {/* Left Side: Contact Info & CTA */}
-          <div className="space-y-8">
-            <div className="bg-[#10102b] p-8 rounded-2xl border
-             border-white/5 shadow-xl">
-              <h3 className="text-2xl font-semibold text-white mb-2">
-                Let's Build Something Amazing</h3>
-              <p className="text-gray-400 mb-8">
-                I specialize in building robust and scalable applications. 
-                Whether you need a secure backend or a stunning frontend, I'm here to help.
+          {/* =========================================
+              LEFT COLUMN: TEXT & INFO
+              ========================================= */}
+          <div className="p-10 md:p-16 lg:p-20 border-b lg:border-b-0 lg:border-r border-white/20 flex flex-col justify-between relative group">
+            
+            <div className="mb-20">
+              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-8">
+                Contact
+              </h2>
+              <p className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-white/50 leading-loose max-w-sm">
+                I specialize in building robust and scalable applications. Whether you need a secure backend or a stunning frontend, I am available for new opportunities and remote collaboration worldwide.
               </p>
-              
-              <div className="space-y-6">
-                {/* Email Item */}
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-purple-600/20 
-                  flex items-center justify-center text-purple-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Email Me</p>
-                    <p className="text-lg font-medium text-white">superamrani@gmail.com</p>
-                  </div>
-                </div>
+            </div>
 
-                {/* Location Item (Based on your Algeria mention) */}
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-purple-600/20 
-                  flex items-center justify-center text-purple-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Location</p>
-                    <p className="text-lg font-medium text-white">Algeria (Remote Worldwide)</p>
-                  </div>
-                </div>
+            <div className="space-y-12">
+              {/* Location Block */}
+              <div>
+                <h4 className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">
+                  Address
+                </h4>
+                <p className="text-sm md:text-base font-bold uppercase tracking-widest text-white">
+                  Oran, Algeria [UTC+1]
+                </p>
               </div>
+
+              {/* Email Block */}
+              <div>
+                <h4 className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">
+                  E-mail
+                </h4>
+                <a 
+                  href="mailto:superamrani@gmail.com" 
+                  className="text-sm md:text-base font-bold uppercase tracking-widest text-white hover:text-white/60 transition-colors"
+                >
+                  superamrani@gmail.com
+                </a>
+              </div>
+            </div>
+            
+            {/* Minimalist Watermark */}
+            <div className="absolute top-10 right-10 text-[10px] tracking-[0.4em] uppercase text-white/10 pointer-events-none">
+              05 // End
             </div>
           </div>
 
-          {/* Right Side: The Form */}
-          <form onSubmit={handleSubmit} className="bg-[#10102b] p-8 rounded-2xl border border-white/5 shadow-xl relative overflow-hidden">
-            {/* Subtle Gradient overlay on form */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+          {/* =========================================
+              RIGHT COLUMN: MINIMALIST FORM
+              ========================================= */}
+          <div className="p-10 md:p-16 lg:p-20 flex flex-col justify-center bg-[#0a0a0a]">
+            
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white mb-16">
+              Contact Form
+            </h2>
 
-            <div className="space-y-6 relative z-10">
+            <form onSubmit={handleSubmit} className="space-y-10 w-full max-w-md">
+              
               {/* Name Input */}
-              <div className="group">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-purple-400 transition-colors">Your Name</label>
+              <div className="relative group">
                 <input
                   type="text"
                   name="name"
                   required
-                  placeholder="John Doe"
-                  className="w-full bg-[#0a0a1a] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                  placeholder="Your name"
+                  className="w-full bg-transparent border-b border-white/20 py-4 text-white text-[11px] tracking-[0.2em] uppercase placeholder-white/30 focus:outline-none focus:border-white transition-colors rounded-none"
                   value={formData.name}
                   onChange={handleChange}
                 />
               </div>
 
               {/* Email Input */}
-              <div className="group">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-purple-400 transition-colors">Email Address</label>
+              <div className="relative group">
                 <input
                   type="email"
                   name="email"
                   required
-                  placeholder="john@example.com"
-                  className="w-full bg-[#0a0a1a] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                  placeholder="Your e-mail"
+                  className="w-full bg-transparent border-b border-white/20 py-4 text-white text-[11px] tracking-[0.2em] uppercase placeholder-white/30 focus:outline-none focus:border-white transition-colors rounded-none"
                   value={formData.email}
                   onChange={handleChange}
                 />
               </div>
 
               {/* Message Input */}
-              <div className="group">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-purple-400 transition-colors">Your Message</label>
+              <div className="relative group">
                 <textarea
                   name="message"
                   required
                   rows="4"
-                  placeholder="How can I help you?"
-                  className="w-full bg-[#0a0a1a] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all resize-none"
+                  placeholder="Message"
+                  className="w-full bg-transparent border-b border-white/20 py-4 text-white text-[11px] tracking-[0.2em] uppercase placeholder-white/30 focus:outline-none focus:border-white transition-colors resize-none rounded-none"
                   value={formData.message}
                   onChange={handleChange}
                 />
               </div>
 
-              {/* Submit Button - Matching your 'Copy Email' style */}
+              {/* Brutalist Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-lg shadow-lg shadow-purple-600/20 transform transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="mt-8 border border-white/20 py-5 px-10 text-[10px] tracking-[0.4em] font-bold uppercase text-white hover:bg-white hover:text-black transition-all duration-500 w-fit"
               >
                 Send Message
               </button>
-            </div>
-          </form>
+              
+            </form>
+          </div>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

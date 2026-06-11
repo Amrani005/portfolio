@@ -1,85 +1,92 @@
-import React from 'react'
-import { Navigation } from '../constants'
-import { useState } from 'react'
-import {AnimatePresence, motion} from 'motion/react'
-import { div } from 'motion/react-client'
+import React, { useState } from 'react';
+import { Navigation } from '../constants';
+import { AnimatePresence, motion } from 'motion/react';
 
-const header = () => {
-    const [isOpen,setIsOpen] = useState(false);
-    const handleClick = () =>{
-        setIsOpen(!isOpen);
-    }
-     const scrollToForm = () => {
-     document.getElementById('hero-section')?.scrollIntoView({ behavior: 'smooth' });
-   
-    };
-    
-    
-    
-  return ( 
-    <div >
-        <div className={` mt-4 bg-black/30 fixed text-red-800 text-3 px-3 lg:p-5 
-      md:p-5 justify-between flex items-center shadow-xl w-[85%]
-        h-17 md:justify-between lg:left-30 left-8 backdrop-blur-lg z-100   ${isOpen ? 'rounded-t-3xl  ':'rounded-full '}   
-     `}>
-       <p onClick={scrollToForm} className='text-3xl cursor-pointer  font-bold '> Seddik</p>
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-         <div className='hidden md:hidden lg:hidden px-5 xl:flex gap-15 text-xl  text-zinc-100
-        '>
-            {Navigation.map((item)=>(
-               <a href={item.href} className='text-white text-xl  cursor-pointer 
-                duration-300 hover:scale-[1.1] hover:text-red-700  '>
-                    {item.name}
-               </a>
-            ))}
-            
-         </div>
+  const handleClick = () => {
+    if(!isOpen)
+    setIsOpen(true);
+    else
+    setIsOpen(false);
+  };
+ 
+  const scrollToForm = () => {
+    document.getElementById('hero-section')?.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false); 
+  };
 
-         <div className='flex  xl:hidden cursor-pointer duration-300 '>
-            <button onClick={()=>handleClick()} className='cursor-pointer' >
-                 <img src={!isOpen?'assets/menu.svg':'assets/close.svg'} className='w-13 h-13  rounded-xl' />
-                    
-            </button>
+  return (
+    <>
+      {/* Main Floating Header */}
+      <header className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%]
+       max-w-4xl py-3 px-6 md:px-8 flex justify-between items-center
+         backdrop-blur  z-[100] border border-white/10 rounded-full shadow-2xl">
+        
+        {/* Logo */}
+        <p 
+          onClick={scrollToForm} 
+          className="text-2xl md:text-3xl cursor-pointer font-bold 
+          text-white tracking-tight"
+        >
+          Seddik
+        </p>
 
-         </div>
-
-          
-            
-
-         
-
-         
-    </div>
-    <AnimatePresence>
-
-    
-    {isOpen && (
-            <motion.div 
-              initial={{opacity:0, y:-10}}
-              animate={{opacity:1, y:0}}
-              exit={{opacity:0, y:-10}}
-              transition={{duration:0.4}}
-              className='flex flex-col fixed top-20 items-center
-                z-100 w-[85%] h-[50%] bg-black/30 backdrop-blur-lg
-                rounded-b-3xl left-8'
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-8 items-center text-zinc-300">
+          {Navigation.map((item) => (
+            <a 
+              key={item.name} 
+              href={item.href} 
+              className="text-base font-medium transition-all duration-300 hover:text-white hover:-translate-y-0.5"
             >
-              <div className='flex flex-col gap-5 mt-8 ' >
-                {Navigation.map((item)=>(
-                  
-                    <a href={item.href}  className='text-white text-3xl hover:text-red-600
-                       cursor-pointer text-center  font-bold duration-300 hover:scale-110 mb-10 '>
-                     {item.name}
-                   </a>
-                  
-                    
-                ))}</div>
-               
-            </motion.div>
-         )}
-         </AnimatePresence>
-    </div>
-   
-  )
-}
+              {item.name}
+            </a>
+          ))}
+        </nav>
 
-export default header
+        {/* Mobile Menu Toggle */}
+        <div className="flex md:hidden items-center">
+          <button onClick={handleClick} className="cursor-pointer p-1 active:scale-95 transition-transform">
+            <img 
+              src={!isOpen ? 'assets/menu.svg' : 'assets/close.svg'} 
+              alt="Menu Toggle" 
+              className="w-7 h-7" 
+            />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Dropdown Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="fixed top-28 left-1/2 -translate-x-1/2 w-[90%]
+             max-w-sm flex flex-col items-center  backdrop-blur-xl border border-white/10 rounded-3xl z-[90] py-8 shadow-2xl md:hidden"
+          >
+            <div className="flex flex-col gap-6 w-full px-6">
+              {Navigation.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)} // Close menu on click
+                  className="text-zinc-300 text-2xl font-semibold text-center 
+                  py-2 transition-all duration-300 hover:text-red-600 hover:scale-105"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default Header;
