@@ -44,7 +44,7 @@ const Projects = () => {
                 className="absolute left-[5%] md:left-[15%] w-32 md:w-56 h-48 md:h-80 grayscale z-0 border border-white/10"
               >
                 <img
-                  src={myProjects[0]?.image || '/public/assets/neggaaaa_compressed.png'}
+                  src={myProjects[0].image || '/public/assets/neggaaaa_compressed.png'}
                   alt="Project Thumbnail Left"
                   className="w-full h-full object-cover"
                 />
@@ -57,7 +57,7 @@ const Projects = () => {
                 className="absolute right-[5%] md:right-[15%] w-32 md:w-56 h-48 md:h-80 grayscale z-0 border border-white/10"
               >
                 <img
-                  src={myProjects[2]?.image || '/public/assets/neggaaaa_compressed.png'}
+                  src={myProjects[2].image || '/public/assets/neggaaaa_compressed.png'}
                   alt="Project Thumbnail Right"
                   className="w-full h-full object-cover"
                 />
@@ -70,7 +70,7 @@ const Projects = () => {
                 className="relative z-10 w-40 md:w-64 h-56 md:h-96 grayscale drop-shadow-2xl border border-white/20 bg-[#0a0a0a]"
               >
                 <img
-                  src={myProjects[5]?.image || '/public/assets/neggaaaa_compressed.png'}
+                  src={myProjects[5].image || '/public/assets/neggaaaa_compressed.png'}
                   alt="Project Thumbnail Center"
                   className="w-full h-full object-cover opacity-80"
                 />
