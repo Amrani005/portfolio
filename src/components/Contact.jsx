@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // Using standard framer-motion import
 
-const Contact = () => {
+const Contact= () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,13 +12,7 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form Submitted', formData);
-    alert("Message sent! (Simulated)");
-    setFormData({ name: '', email: '', message: '' });
-  };
+  
 
   return (
     <section 
@@ -93,7 +87,13 @@ const Contact = () => {
               Contact Form
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-10 w-full max-w-md">
+            <form 
+              
+              className="space-y-10 w-full max-w-md"
+              action="https://getform.io/f/amdylynb"
+              method="POST"
+              encType="multipart/form-data" // <-- IMPORTANT: Getform requires this
+             >
               
               {/* Name Input */}
               <div className="relative group">
