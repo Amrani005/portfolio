@@ -36,7 +36,7 @@ const Stats = () => {
   const statsData = [
     {
       id: 1,
-      value: 12,
+      value: 8,
       suffix: "+",
       label: "Projects Completed",
       desc: "Delivered scalable solutions",
@@ -57,8 +57,8 @@ const Stats = () => {
     },
     {
       id: 4,
-      value: 99,
-      suffix: "%",
+      value: 2,
+      suffix: "+",
       label: "Client Satisfaction",
       desc: "Based on repeat work",
     },
@@ -125,7 +125,7 @@ const Stats = () => {
 
               {/* Animated Number: Inherits text color for smooth inversion */}
               <div className="text-6xl lg:text-8xl font-black tracking-tighter mt-8 self-end transition-colors duration-500">
-                <Counter value={stat.value} suffix={stat.suffix} />
+                 {stat.value} {stat.suffix} 
               </div>
             </motion.div>
           ))}

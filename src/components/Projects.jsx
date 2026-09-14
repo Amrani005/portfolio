@@ -11,7 +11,7 @@ const Projects = () => {
   const y = useMotionValue(0)
 
   const springX = useSpring(x, { damping: 15, stiffness: 100 })
-  const springY = useSpring(y, { damping: 15, stiffness: 100 })
+  const springY = useSpring(y, { damping: 100, stiffness: 100 })
 
   const handleMouseMove = (e) => {
     if (showProjects) {
@@ -36,15 +36,16 @@ const Projects = () => {
             transition={{ duration: 0.7, ease: 'easeInOut' }}
             className="flex flex-col items-center justify-center w-full px-6 py-20 z-10"
           >
-            <div className="relative flex justify-center items-center w-full max-w-4xl mx-auto h-[300px] md:h-[450px] mb-12">
+            <div className="relative flex justify-center items-center
+             w-full max-w-4xl mx-auto h-[300px] md:h-[450px] mb-12 ">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 0.6, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="absolute left-[5%] md:left-[15%] w-32 md:w-56 h-48 md:h-80 grayscale z-0 border border-white/10"
+                className="absolute left-[5%] lg:left-[7%] md:left-[15%] w-32 md:w-56 h-48 md:h-80 grayscale z-0 border border-white/10"
               >
                 <img
-                  src={myProjects[0].image || '/public/assets/neggaaaa_compressed.png'}
+                  src={myProjects[3].image || '/public/assets/neggaaaa_compressed.png'}
                   alt="Project Thumbnail Left"
                   className="w-full h-full object-cover"
                 />
@@ -52,9 +53,10 @@ const Projects = () => {
 
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 0.6, x: 0 }}
+                whileInView={{ opacity: 0.6, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="absolute right-[5%] md:right-[15%] w-32 md:w-56 h-48 md:h-80 grayscale z-0 border border-white/10"
+                className="absolute right-[5%] md:right-[15%] w-32 md:w-56 h-48
+                 md:h-80 grayscale z-0 border border-white/10 lg:right-[7%]  "
               >
                 <img
                   src={myProjects[2].image || '/public/assets/neggaaaa_compressed.png'}
@@ -65,12 +67,12 @@ const Projects = () => {
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 className="relative z-10 w-40 md:w-64 h-56 md:h-96 grayscale drop-shadow-2xl border border-white/20 bg-[#0a0a0a]"
               >
                 <img
-                  src={myProjects[5].image || '/public/assets/neggaaaa_compressed.png'}
+                  src={myProjects[0].image || '/public/assets/neggaaaa_compressed.png'}
                   alt="Project Thumbnail Center"
                   className="w-full h-full object-cover opacity-80"
                 />
@@ -79,7 +81,7 @@ const Projects = () => {
 
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
               className="text-4xl md:text-7xl lg:text-[6rem] font-black uppercase tracking-tighter leading-none mb-4 z-20 text-center"
             >
@@ -88,7 +90,7 @@ const Projects = () => {
 
             <motion.p
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
               className="text-[8px] md:text-[10px] tracking-[0.4em] uppercase text-white/50 mb-12 text-center"
             >
@@ -97,7 +99,7 @@ const Projects = () => {
 
             <motion.button
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               transition={{ delay: 1 }}
               onClick={() => setShowProjects(true)}
               className="px-12 py-4 border border-white/10 bg-black/50 backdrop-blur-sm text-white text-[10px] tracking-[0.3em] font-bold uppercase hover:bg-white hover:text-black hover:border-white transition-all duration-500 z-20"
@@ -139,15 +141,6 @@ const Projects = () => {
               {myProjects.map((project) => (
                 <Project key={project.id} {...project} setPreview={setPreview} />
               ))}
-
-              {preview && (
-                <motion.img
-                  className="fixed top-0 left-0 z-[300] object-cover h-[350px] w-[450px] border border-white/20 pointer-events-none grayscale opacity-90 shadow-2xl shadow-black"
-                  style={{ x: springX, y: springY }}
-                  src={preview}
-                  alt="Project Preview"
-                />
-              )}
             </div>
 
             <div className="block md:hidden px-6 space-y-8 pb-10">
@@ -160,6 +153,26 @@ const Projects = () => {
               ))}
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* 
+        FIX: We moved the preview image outside of the animated container. 
+        Because it is 'fixed' and outside any transformed parent, 
+        e.clientY will now accurately track the screen position perfectly.
+      */}
+      <AnimatePresence>
+        {preview && showProjects && (
+          <motion.img
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 0.9, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.2 }}
+            className="fixed -top-30 left-0 z-[300] object-cover h-[350px] w-[450px] border border-white/20 pointer-events-none grayscale shadow-2xl shadow-black"
+            style={{ x: springX, y: springY }}
+            src={preview}
+            alt="Project Preview"
+          />
         )}
       </AnimatePresence>
     </section>

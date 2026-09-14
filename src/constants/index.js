@@ -1,133 +1,62 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
-    subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/accessories.jpg",
+    title: "Athletix",
+    description: "",
+    href: "https://athletix-phi.vercel.app/",
+    image: "/assets/projects/athletix.png",
     tags: [
-      { id: 1, name: "C#", path: "/assets/logos/csharp.svg" },
-      { id: 2, name: ".Net", path: "/assets/logos/dotnet.svg" },
-      { id: 3, name: "Ef Core", path: "/assets/logos/efcore.png" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 3, name: "TypeScript", path: "/assets/logos/typescript.svg" },
+      { id: 4, name: "Next.js", path: "/assets/logos/nextjs.svg" },
+      { id: 5, name: "postgresql", path: "/assets/logos/postgresql.svg" },
+      
     ],
   },
-
   {
-    id: 2,
-    title: "Authentication & Authorization System",
-    description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
-    subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/auth-system.jpg",
-    tags: [
-      { id: 1, name: "Auth0", path: "/assets/logos/auth0.svg" },
-      { id: 2, name: "React", path: "/assets/logos/react.svg" },
-      { id: 3, name: "SQLite", path: "/assets/logos/sqlite.svg" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
-    ],
-  },
-
+  id: 2,
+  title: "Eco-Diars",
+  description: "EcoDiars is a comprehensive digital platform and advanced Knowledge Management System developed to document, classify, and preserve the architectural and environmental heritage in Algeria (from Roman ruins and Saharan Ksour to Ottoman Casbahs). The project goes beyond being just a website it relies on a complex software architecture that separates an ultra-fast interactive user interface from a massive backend powered by Artificial Intelligence to understand, analyze, and semantically structure historical and architectural data. Key Features and Technical Challenges Achieved Natural Language Processing (NLP) & Semantic Search: NLP technologies were integrated into the backend to process historical and architectural texts and documents. This enables entity extraction (names, dates, architectural styles) and provides a smart search system that relies not on mere keywords, but on understanding the context of the users query. Ontology Modeling: The backend database was structured using complex ontological models to map the intricate relationships between architectural landmarks (such as the Casbah of Algiers or the Old City of Constantine), historical periods, geographical boundaries, and environmental aspects. This creates a highly interconnected Knowledge Graph. Interactive Geospatial Maps: Developed the National Sectors Map, which accurately displays the geographical distribution of heritage and environmental sites across Algeria. It utilizes Leaflet integrated with the Google Maps API to provide detailed map inspections and high-resolution satellite imagery for each landmark. Cinematic and Interactive UI/UX: Designed and built a frontend using modern technologies, featuring interactive carousels, contemporary visual effects (Glassmorphism), and detailed pages that present architectural and historical data (such as classifications and technical specifications) in an organized, highly readable format. Tech Stack and Software Engineering Front-end: Next.js framework (to ensure rapid loading speeds, a highly interactive user experience, and advanced SEO optimization to facilitate researchers access to the platform).Back-end: Django framework (Python) to build a robust infrastructure capable of handling massive amounts of interconnected data and managing the knowledge system.AI & Data: NLP algorithms for processing historical texts and Ontology modeling for semantic data organization.GIS & Mapping Systems: Integration with interactive mapping technologies (OpenStreetMap/Leaflet & Google Maps) to display accurate geographical data. Engineering Value Delivered (My Role) As the Lead Software Engineer on this project, I solved one of the most complex problems in digital humanities: transforming unstructured historical archives and texts into organized, interconnected data that machines can understand and present to the user in a visually engaging and interactive way. Combining the power of Python and Django for complex data processing with the speed and elegance of Next.js resulted in a world-class research platform that serves academic researchers and heritage preservation enthusiasts alike",
+  href: "",
+  image:"/assets/projects/Eco-diars.png",
+  galleryimages:["/assets/projects/Eco-diars.png","/assets/projects/Eco-diars2.png","/assets/projects/Eco-diars3.png","/assets/projects/Eco-diars4.png","/assets/projects/Eco-diars5.png","/assets/projects/Eco-diars6.png","/assets/projects/Eco-diars7.png","/assets/projects/Eco-diars8.png","/assets/projects/Eco-diars9.png","/assets/projects/Eco-diars10.png","/assets/projects/Eco-diars11.png","/assets/projects/Eco-diars12.png","/assets/projects/Eco-diars13.png","/assets/projects/Eco-diars14.png","/assets/projects/Eco-diars15.png","/assets/projects/Eco-diars16.png"],
+  tags: [
+    { id: 1, name: "React", path: "/assets/logos/react.svg" },
+    { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+    { id: 3, name: "Three.js", path: "/assets/logos/threejs.svg" },
+    { id: 4, name: "TypeScript", path: "/assets/logos/typescript.svg" },
+    { id: 5, name: "django", path: "/assets/logos/django.svg" },
+    { id: 6, name: "Python", path: "/assets/logos/python.svg" },
+    { id: 7, name: "Next.js", path: "/assets/logos/nextjs.svg" },
+    { id: 8, name: "NLP", path: "/assets/logos/nlp.svg" },
+  ],
+},
   {
     id: 3,
-    title: "Blazor Web App",
-    description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
-    subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    title: "Dar El Izza ",
+    description: "",
+    href: "https://darelizza.com",
+    image: "/assets/projects/darelizza.png",
     tags: [
-      { id: 1, name: "Blazor", path: "/assets/logos/blazor.svg" },
-      { id: 2, name: ".NET Core", path: "/assets/logos/dotnetcore.svg" },
-      { id: 3, name: "SQLite", path: "/assets/logos/sqlite.svg" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 1, name: "shopify", path: "/assets/logos/shopify.svg" },
+      { id: 2, name: "python", path: "/assets/logos/python.svg" },
+      { id: 3, name: "Liquid", path: "/assets/logos/liquid.svg" },
+      { id: 4, name: "JavaScript", path: "/assets/logos/javascript.svg" }
     ],
   },
-
   {
     id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
+    title: "Likolin Kitaboh",
+    description: "",
+    href: "https://e-site-121f.vercel.app/",
+    image: "/assets/projects/likolinkitaboh.png",
     tags: [
-      { id: 1, name: "C++", path: "/assets/logos/cplusplus.svg" },
-      { id: 2, name: "C#", path: "/assets/logos/csharp.svg" },
-      { id: 3, name: "Git", path: "/assets/logos/git.svg" },
-      { id: 4, name: "Microsoft", path: "/assets/logos/microsoft.svg" },
-    ],
-  },
-
-  {
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
-    tags: [
-      { id: 1, name: "WordPress", path: "/assets/logos/wordpress.svg" },
-      { id: 2, name: "HTML5", path: "/assets/logos/html5.svg" },
-      { id: 3, name: "CSS3", path: "/assets/logos/css3.svg" },
-      { id: 4, name: "Vite.js", path: "/assets/logos/vitejs.svg" },
-    ],
-  },
-
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/elearning.jpg",
-    tags: [
-      { id: 1, name: "Blazor", path: "/assets/logos/blazor.svg" },
-      { id: 2, name: "Azure", path: "/assets/logos/azure.svg" },
-      { id: 3, name: "Stripe", path: "/assets/logos/stripe.svg" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 3, name: "TypeScript", path: "/assets/logos/typescript.svg" },
+      { id: 4, name: "Next.js", path: "/assets/logos/nextjs.svg" },
+      { id: 5, name: "postgresql", path: "/assets/logos/postgresql.svg" },
     ],
   },
 ];
