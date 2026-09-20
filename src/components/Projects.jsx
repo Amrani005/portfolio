@@ -45,7 +45,7 @@ const Projects = () => {
                 className="absolute left-[5%] lg:left-[7%] md:left-[15%] w-32 md:w-56 h-48 md:h-80 grayscale z-0 border border-white/10"
               >
                 <img
-                  src={myProjects[5].image || '/public/assets/neggaaaa_compressed.png'}
+                  src={myProjects[4].image || '/public/assets/neggaaaa_compressed.png'}
                   alt="Project Thumbnail Left"
                   className="w-full h-full object-cover"
                 />
