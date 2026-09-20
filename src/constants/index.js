@@ -59,6 +59,20 @@ export const myProjects = [
       { id: 5, name: "postgresql", path: "/assets/logos/postgresql.svg" },
     ],
   },
+  {
+    id: 5,
+    title: "iPhone 15 Store",
+    description: "An Apple-inspired e-commerce experience for showcasing and purchasing the iPhone 15. The project combines a polished product presentation with variant selection, pricing, cart management, and a streamlined checkout flow designed around a premium shopping experience.",
+    href: "https://appel-store.vercel.app/",
+    image: "/assets/projects/apple15.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 3, name: "TypeScript", path: "/assets/logos/typescript.svg" },
+      { id: 4, name: "Next.js", path: "/assets/logos/nextjs.svg" },
+      { id: 5, name: "Stripe", path: "/assets/logos/stripe.svg" },
+    ],
+  },
 ];
 
 export const mySocials = [
