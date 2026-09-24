@@ -73,6 +73,34 @@ export const myProjects = [
       { id: 5, name: "Stripe", path: "/assets/logos/stripe.svg" },
     ],
   },
+  {
+    id:6,
+    title:"chocolatsfavoris",
+    description:"",
+    href:"https://www.chocolatsfavoris.com/",
+    image:"/assets/prjects/shocolat.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 3, name: "TypeScript", path: "/assets/logos/typescript.svg" },
+      { id: 4, name: "Next.js", path: "/assets/logos/nextjs.svg" },
+      { id: 5, name: "Stripe", path: "/assets/logos/stripe.svg" },
+    ],
+  },
+  {
+    id:6,
+    title:"mdebeauty",
+    description:"",
+    href:"https://mdebeauty.com/",
+    image:"/assets/prjects/shocolat.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
+      { id: 3, name: "TypeScript", path: "/assets/logos/typescript.svg" },
+      { id: 4, name: "Next.js", path: "/assets/logos/nextjs.svg" },
+      { id: 5, name: "Stripe", path: "/assets/logos/stripe.svg" },
+    ],
+  }
 ];
 
 export const mySocials = [
