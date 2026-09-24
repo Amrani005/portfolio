@@ -90,11 +90,11 @@ export const myProjects = [
     ],
   },
   {
-    id:6,
+    id:7,
     title:"mdebeauty",
     description:"",
     href:"https://mdebeauty.com/",
-    image:"/assets/prjects/shocolat.png",
+    image:"/assets/prjects/women.png",
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
