@@ -104,7 +104,22 @@ export const myProjects = [
       { id: 6, name: "postgresql", path: "/assets/logos/postgresql.svg" },
 
     ],
-  }
+  },
+   {
+    id:8,
+    title:"Mojito",
+    description:"",
+    href:"https://gsap-cocktails.vercel.app/",
+    image:"/assets/projects/mojito.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/logos/react.svg" },
+      {id:2,name:"javascript",path:"assets/logos/javascript.svg"},
+      {id:3,name:"GSAP",path:"assets/logos/gsap.svg"}
+
+
+    ],
+  },
+
 ];
 
 export const mySocials = [
