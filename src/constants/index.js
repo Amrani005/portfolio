@@ -78,7 +78,7 @@ export const myProjects = [
     title:"chocolatsfavoris",
     description:"",
     href:"https://www.chocolatsfavoris.com/",
-    image:"/assets/prjects/shocolat.png",
+    image:"/assets/projects/shocolat.png",
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
@@ -94,7 +94,7 @@ export const myProjects = [
     title:"mdebeauty",
     description:"",
     href:"https://mdebeauty.com/",
-    image:"/assets/prjects/women.png",
+    image:"/assets/projects/women.png",
     tags: [
       { id: 1, name: "React", path: "/assets/logos/react.svg" },
       { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
