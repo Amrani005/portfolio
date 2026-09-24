@@ -85,6 +85,8 @@ export const myProjects = [
       { id: 3, name: "TypeScript", path: "/assets/logos/typescript.svg" },
       { id: 4, name: "Next.js", path: "/assets/logos/nextjs.svg" },
       { id: 5, name: "Stripe", path: "/assets/logos/stripe.svg" },
+      { id: 6, name: "postgresql", path: "/assets/logos/postgresql.svg" },
+
     ],
   },
   {
@@ -99,6 +101,8 @@ export const myProjects = [
       { id: 3, name: "TypeScript", path: "/assets/logos/typescript.svg" },
       { id: 4, name: "Next.js", path: "/assets/logos/nextjs.svg" },
       { id: 5, name: "Stripe", path: "/assets/logos/stripe.svg" },
+      { id: 6, name: "postgresql", path: "/assets/logos/postgresql.svg" },
+
     ],
   }
 ];
